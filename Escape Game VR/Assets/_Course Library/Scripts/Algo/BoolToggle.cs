@@ -1,18 +1,33 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
-public class NewBehaviourScript : MonoBehaviour
+public class BoolToggle : MonoBehaviour
 {
-    // Start is called before the first frame update
+    public bool state = false;
+    private Renderer rend;
+
     void Start()
     {
-        
+        rend = GetComponent<Renderer>();
+        UpdateColor();
     }
 
-    // Update is called once per frame
-    void Update()
+    void OnMouseDown()
     {
-        
+        state = !state; // Toggle
+        UpdateColor();
+        XORManager.Instance.UpdateXOR(); // Recalcul du XOR général
+    }
+
+    void UpdateColor()
+    {
+        if (rend != null)
+        {
+            rend.material.color = state ? Color.green : Color.red;
+        }
+    }
+
+    public bool GetState()
+    {
+        return state;
     }
 }
