@@ -135,14 +135,20 @@ public class MasterController : MonoBehaviour
             }
         }
     }
-    
+
     void Update()
     {
-        if(Keyboard.current.escapeKey.wasPressedThisFrame)
+        if (Keyboard.current.escapeKey.wasPressedThisFrame)
             Application.Quit();
-        
+
         RightTeleportUpdate();
         LeftTeleportUpdate();
+
+        if (m_RightLineVisual.enabled || m_LeftLineVisual.enabled) ;
+        {
+            TeleporterParent.SetActive(false);
+            TeleporterParent.SetActive(true);
+        }
     }
 
     void RightTeleportUpdate()
@@ -160,13 +166,14 @@ public class MasterController : MonoBehaviour
             
         }
 
-        
+
         if (axisInput.y <= -0.5f)
         {
-            if(!RightTractorBeam.IsTracting)
+            if (!RightTractorBeam.IsTracting)
                 RightTractorBeam.StartTracting();
+                
         }
-        else if(RightTractorBeam.IsTracting)
+        else if (RightTractorBeam.IsTracting)
         {
             RightTractorBeam.StopTracting();
         }
