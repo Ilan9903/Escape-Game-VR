@@ -201,15 +201,13 @@ public class MasterController : MonoBehaviour
     public void PauseGame()
     {
         Time.timeScale = 0f;
-        AudioListener.pause = true; // Si tu veux couper le son aussi (facultatif)
-        isPaused = true;
+        Debug.Log("Pausing Game");
     }
 
     public void ResumeGame()
     {
         Time.timeScale = 1f;
-        AudioListener.pause = false;
-        isPaused = false;
+        Debug.Log("Resuming Game");
     }
 
 
