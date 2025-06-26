@@ -58,6 +58,9 @@ public class MasterController : MonoBehaviour
     
     List<XRBaseInteractable> m_InteractableCache = new List<XRBaseInteractable>(16);
 
+    bool isPaused = false;
+
+
     void Awake()
     {
         s_Instance = this;
@@ -194,6 +197,22 @@ public class MasterController : MonoBehaviour
 
         m_LastFrameRightEnable = m_RightLineVisual.enabled;
     }
+
+    public void PauseGame()
+    {
+        Time.timeScale = 0f;
+        AudioListener.pause = true; // Si tu veux couper le son aussi (facultatif)
+        isPaused = true;
+    }
+
+    public void ResumeGame()
+    {
+        Time.timeScale = 1f;
+        AudioListener.pause = false;
+        isPaused = false;
+    }
+
+
 
     void LeftTeleportUpdate()
     {
