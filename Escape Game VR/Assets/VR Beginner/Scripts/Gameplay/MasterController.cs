@@ -144,7 +144,7 @@ public class MasterController : MonoBehaviour
         RightTeleportUpdate();
         LeftTeleportUpdate();
 
-        if (m_RightLineVisual.enabled || m_LeftLineVisual.enabled || TeleporterParent.activeSelf)
+        if ((m_RightLineVisual.enabled || m_LeftLineVisual.enabled) && TeleporterParent.activeSelf)
         {
             TeleporterParent.SetActive(false);
             TeleporterParent.SetActive(true);
