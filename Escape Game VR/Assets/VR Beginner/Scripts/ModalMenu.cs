@@ -10,7 +10,7 @@ public class ModalMenu : MonoBehaviour
 
 
 
-    void OpenModal()
+    public void OpenModal()
     {
         // Logic to open the modal menu
         Debug.Log("Modal menu opened.");
@@ -18,7 +18,7 @@ public class ModalMenu : MonoBehaviour
         modalMenu.SetActive(true); // Activate the modal menu GameObject
     }
 
-    void CloseModal()
+    public void CloseModal()
     {
         // Logic to close the modal menu
         Debug.Log("Modal menu closed.");
