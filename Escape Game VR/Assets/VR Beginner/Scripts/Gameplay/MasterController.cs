@@ -58,9 +58,6 @@ public class MasterController : MonoBehaviour
     
     List<XRBaseInteractable> m_InteractableCache = new List<XRBaseInteractable>(16);
 
-    bool isPaused = false;
-
-
     void Awake()
     {
         s_Instance = this;
