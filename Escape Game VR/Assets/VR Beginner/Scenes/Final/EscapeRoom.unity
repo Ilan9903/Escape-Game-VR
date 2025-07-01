@@ -5655,6 +5655,16 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 145810550}
     m_Modifications:
+    - target: {fileID: 3996644622980851558, guid: 7ed4674fd922ca748b5e81975ad7bafc,
+        type: 3}
+      propertyPath: m_UseGravity
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3996644622980851560, guid: 7ed4674fd922ca748b5e81975ad7bafc,
+        type: 3}
+      propertyPath: m_InteractionManager
+      value: 
+      objectReference: {fileID: 681362313}
     - target: {fileID: 3996644622980851560, guid: 7ed4674fd922ca748b5e81975ad7bafc,
         type: 3}
       propertyPath: m_OnSelectExit.m_PersistentCalls.m_Calls.Array.size
