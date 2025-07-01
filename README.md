@@ -1,4 +1,4 @@
-# Escape-Game-VR
+# BugWarts
 
 ESTIAM Lyon
 
