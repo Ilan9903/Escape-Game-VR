@@ -1,4 +1,4 @@
-# BugWarts – Escape Room VR (Unity – dossier Assets/Vr Escape Room Beginner)
+# BugWarts – Escape Room VR - Hackathon ESTIAM Lyon 3e Edition 24-25 Digital Gaming
 
 ## Présentation
 
